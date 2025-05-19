@@ -8,9 +8,6 @@ import java.util.Scanner;
 public class App 
 {
 
-   
-
-
     public static void main( String[] args )
     {
         Scanner sc = new Scanner(System.in);
@@ -40,12 +37,12 @@ public class App
             System.out.printf("O Valor a ser pago é de: %.2f%n", Imposto);
         }
 
+        sc.close();
 
     }
 
-
     public static Double CalcularImposto(Double renda){
-        double imposto = 0.0;
+        double imposto;
 
         if (renda <= 27870.40) {
             imposto = 0;
@@ -64,6 +61,7 @@ public class App
                       (50148.25 - 37751.55) * 0.15 +
                       (37751.55 - 27870.40) * 0.075;
         }
+
 
         return imposto;
     }
